@@ -14,7 +14,7 @@ lastday()  {
         fi
 
         if ((month != 2)) ; then
-        			print ${mdays[month]}
+        	print ${mdays[month]}
                 return 0
         fi
 
@@ -48,7 +48,7 @@ lastday()  {
                 if ((int_day != 0)); then
                         return 1
                 fi
-                #echo "$int_year $int_day $int_month"
+                
                 if ((int_year<=0 && int_day<=0 && int_month<=0)) ; then
 			lday=`lastday $year $month`
 	                val=`echo $?`
