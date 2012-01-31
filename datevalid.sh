@@ -50,17 +50,17 @@ lastday()  {
                 fi
                 #echo "$int_year $int_day $int_month"
                 if ((int_year<=0 && int_day<=0 && int_month<=0)) ; then
-						lday=`lastday $year $month`
-                                                val=`echo $?`
-							
-					if [ $val=0 -a "$lday" -gt $month ];then
-						return 0
-					else
-						return 1
-					fi
+			lday=`lastday $year $month`
+	                val=`echo $?`
 					
-				else 
-                 return 1
+			if [ $val=0 -a "$lday" -gt $month ];then
+				return 0
+			else
+				return 1
+			fi
+					
+		else 
+                    return 1
                 fi
         else
                 print -u2 - "$usage"
